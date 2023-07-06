@@ -8,7 +8,7 @@ public class FormGame extends javax.swing.JFrame {
     boolean useTemp=false, useProx=false;
     public FormGame() {
         initComponents();
-        lblTextBox.setText("<html>Welcome to Fakinator!<br>The best Guessing Game!<br>Pick your settings and begin.</html>");
+        lblTextBox.setText("<html>Bem Vindo ao Fakinator!<br>O melhor jogo de advinha!<br>Escolha as suas definições.</html>");
         lblTxt4.setVisible(false);
         spinGuess.setVisible(false);
         btnGuess.setVisible(false);
@@ -54,7 +54,7 @@ public class FormGame extends javax.swing.JFrame {
         lblTxt1.setBackground(new java.awt.Color(255, 255, 255));
         lblTxt1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblTxt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTxt1.setText("Maximum Number");
+        lblTxt1.setText("Número Máximo");
         lblTxt1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         lblTxt1.setOpaque(true);
         getContentPane().add(lblTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 263, 150, 30));
@@ -62,7 +62,7 @@ public class FormGame extends javax.swing.JFrame {
         lblTxt2.setBackground(new java.awt.Color(255, 255, 255));
         lblTxt2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblTxt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTxt2.setText("Minimum Number");
+        lblTxt2.setText("Número Mínimo");
         lblTxt2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         lblTxt2.setOpaque(true);
         getContentPane().add(lblTxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 312, 150, 30));
@@ -70,7 +70,7 @@ public class FormGame extends javax.swing.JFrame {
         lblTxt3.setBackground(new java.awt.Color(255, 255, 255));
         lblTxt3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblTxt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTxt3.setText("Number of Guesses");
+        lblTxt3.setText("Número de Advinhas");
         lblTxt3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         lblTxt3.setOpaque(true);
         getContentPane().add(lblTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 358, 150, 30));
@@ -78,7 +78,7 @@ public class FormGame extends javax.swing.JFrame {
         lblTxt4.setBackground(new java.awt.Color(255, 255, 255));
         lblTxt4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblTxt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTxt4.setText("Value");
+        lblTxt4.setText("Valor");
         lblTxt4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         lblTxt4.setOpaque(true);
         getContentPane().add(lblTxt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, 60, 30));
@@ -96,7 +96,7 @@ public class FormGame extends javax.swing.JFrame {
         getContentPane().add(spinNumGuess, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 75, 30));
 
         btnGuess.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnGuess.setText("Guess");
+        btnGuess.setText("Palpite");
         btnGuess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuessActionPerformed(evt);
@@ -105,7 +105,7 @@ public class FormGame extends javax.swing.JFrame {
         getContentPane().add(btnGuess, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 90, 30));
 
         btnStart.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnStart.setText("Start Game");
+        btnStart.setText("Começar Jogo");
         btnStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnStartActionPerformed(evt);
@@ -114,16 +114,11 @@ public class FormGame extends javax.swing.JFrame {
         getContentPane().add(btnStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, -1, 30));
 
         checkProx.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        checkProx.setText("Proximity Mode");
+        checkProx.setText("Modo Próximidade");
         getContentPane().add(checkProx, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, -1, -1));
 
         checkTemp.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        checkTemp.setText("Temperature Mode");
-        checkTemp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkTempActionPerformed(evt);
-            }
-        });
+        checkTemp.setText("Modo Temperatura");
         getContentPane().add(checkTemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
 
         spinGuess.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -164,10 +159,10 @@ public class FormGame extends javax.swing.JFrame {
                 guessAmount="∞";
                 numGuess=-1;
             }
-            lblTextBox.setText("<html>I thought of a number<br>between "+numMin+" and "+numMax+".<br>You've got "+guessAmount+" guesses to get it right!</html>");
+            lblTextBox.setText("<html>Pensei em um número<br>entre "+numMin+" e "+numMax+".<br>Tem "+guessAmount+" advinhas para acertar!</html>");
         }
         else{
-            lblTextBox.setText("<html>Invalid settings...<br> The Maximum number must be greater than the Minimum.<br>Please pick settings that comply with the rules.</html>");
+            lblTextBox.setText("<html>Valores inválidos...<br> O número Máximo tem que ser maior que o Mínimo.<br>Por favor escolha valores que cumpram as regras.</html>");
         }
         
     }//GEN-LAST:event_btnStartActionPerformed
@@ -187,46 +182,46 @@ public class FormGame extends javax.swing.JFrame {
             checkTemp.setVisible(true);
             checkProx.setVisible(true);
             btnStart.setVisible(true);
-            lblTextBox.setText("<html><strong>YOU WIN!</strong><br>Wanna try again?</html>");
+            lblTextBox.setText("<html><strong>GANHOU!</strong><br>Deseja tentar outra vez?</html>");
             
             lblTxt4.setVisible(false);
             spinGuess.setVisible(false);
             btnGuess.setVisible(false);
         }
         else{
-            if((ranGuess>(numCorrect-ranHot))&&(ranGuess<(numCorrect+ranHot))) ranTemp="Burning Hot!";
-            else if((ranGuess>(numCorrect-ranMild))&&(ranGuess<(numCorrect+ranMild))) ranTemp="Toasty.";
-            else if((ranGuess>(numCorrect-ranCold))&&(ranGuess<(numCorrect+ranCold))) ranTemp="Cold.";
-            else ranTemp="Freezing Cold!";
-            ranProx=numCorrect>ranGuess?"greater":"smaller";
+            if((ranGuess>(numCorrect-ranHot))&&(ranGuess<(numCorrect+ranHot))) ranTemp="quente";
+            else if((ranGuess>(numCorrect-ranMild))&&(ranGuess<(numCorrect+ranMild))) ranTemp="morna";
+            else if((ranGuess>(numCorrect-ranCold))&&(ranGuess<(numCorrect+ranCold))) ranTemp="fria";
+            else ranTemp="gelada";
+            ranProx=numCorrect>ranGuess?"maior":"menor";
             
             if(numGuess>1){
                 numGuess--;
                 if((useTemp==true)&&(useProx==true)){
-                    lblTextBox.setText("<html>Wrong.<br>Your guess is <strong>"+ranTemp+"</strong><br>The number is <strong>"+ranProx+"</strong> than your guess.<br>You've got <strong>"+numGuess+"</strong> more guesses.</html>");
+                    lblTextBox.setText("<html>Errado.<br>A sua advinha está <strong>"+ranTemp+"</strong>.<br>O número é <strong>"+ranProx+"</strong> que a sua advinha.<br>Tem <strong>"+numGuess+"</strong> tentativas.</html>");
                 }
                 else if(useTemp==true){
-                    lblTextBox.setText("<html>Wrong.<br>Your guess is <strong>"+ranTemp+"</strong><br>You've got <strong>"+numGuess+"</strong> more guesses.</html>");
+                    lblTextBox.setText("<html>Errado.<br>A sua advinha está <strong>"+ranTemp+"</strong>.<br>Tem <strong>"+numGuess+"</strong> tentativas.</html>");
                 }
                 else if(useProx==true){
-                    lblTextBox.setText("<html>Wrong.<br>The number is <strong>"+ranProx+"</strong> than your guess.<br>You've got <strong>"+numGuess+"</strong> more guesses.</html>");
+                    lblTextBox.setText("<html>Errado.<br>O número é <strong>"+ranProx+"</strong> que a sua advinha.<br>Tem <strong>"+numGuess+"</strong> tentativas.</html>");
                 }
                 else{
-                    lblTextBox.setText("<html>Wrong.<br>You've got <strong>"+numGuess+"</strong> more guesses.</html>");
+                    lblTextBox.setText("<html>Errado.<br>Tem <strong>"+numGuess+"</strong> tentativas.</html>");
                 }
             }
             else if(numGuess==-1){
                 if((useTemp==true)&&(useProx==true)){
-                    lblTextBox.setText("<html>Wrong.<br>Your guess is <strong>"+ranTemp+"</strong><br>The number is <strong>"+ranProx+"</strong> than your guess.<br>Try again.</html>");
+                    lblTextBox.setText("<html>Errado.<br>A sua advinha está <strong>"+ranTemp+"</strong>.<br>O número é <strong>"+ranProx+"</strong> que a sua advinha.<br>Tente outra vez.</html>");
                 }
                 else if(useTemp==true){
-                    lblTextBox.setText("<html>Wrong.<br>Your guess is <strong>"+ranTemp+"</strong><br>Try again.</html>");
+                    lblTextBox.setText("<html>Errado.<br>A sua advinha está <strong>"+ranTemp+"</strong>.<br>Tente outra vez.</html>");
                 }
                 else if(useProx==true){
-                    lblTextBox.setText("<html>Wrong.<br>The number is <strong>"+ranProx+"</strong> than your guess.<br>Try again.</html>");
+                    lblTextBox.setText("<html>Errado.<br>O número é <strong>"+ranProx+"</strong> que a sua advinha.<br>Tente outra vez.</html>");
                 }
                 else{
-                    lblTextBox.setText("<html>Wrong.<br>Try again.</html>");
+                    lblTextBox.setText("<html>Errado.<br>Tente outra vez.</html>");
                 }
             }
             else if(numGuess==1){
@@ -239,7 +234,7 @@ public class FormGame extends javax.swing.JFrame {
                 checkTemp.setVisible(true);
                 checkProx.setVisible(true);
                 btnStart.setVisible(true);
-                lblTextBox.setText("<html>You lost...<br>Wanna try again?</html>");
+                lblTextBox.setText("<html>Falhou...<br>Deseja tentar outra vez?</html>");
             
                 lblTxt4.setVisible(false);
                 spinGuess.setVisible(false);
@@ -247,10 +242,6 @@ public class FormGame extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_btnGuessActionPerformed
-
-    private void checkTempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkTempActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_checkTempActionPerformed
 
     /**
      * @param args the command line arguments
